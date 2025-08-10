@@ -1,4 +1,4 @@
-# streamlit_app.py
+# app.py
 import streamlit as st
 import requests
 import datetime
@@ -16,12 +16,12 @@ st.subheader("Chọn tỉnh và ngày để xem thông tin thời tiết (từ n
 
 # Danh sách tỉnh
 provinces = list(PROVINCE_COORDS.keys())
-selected_province = st.selectbox("Chọn tỉnh/thành phố:", provinces)
+selected_province = st.selectbox("Chọn tỉnh/thành phố:", provinces, index=1)
 
 # Chọn ngày dự báo 
 today = datetime.date.today()
 min_date = today + datetime.timedelta(days=1)
-max_date = today + datetime.timedelta(days=5)  # Forecast API chỉ có 5 ngày
+max_date = today + datetime.timedelta(days=5)  
 selected_date = st.date_input("Chọn ngày dự báo:", min_value=min_date, max_value=max_date, value=min_date)
 
 # Nút xem thời tiết (chỉ 1 lần)

@@ -26,8 +26,8 @@ pip install streamlit requests
 pip freeze > requirements.txt
 ```
 
-# 5 chạy file streamlit_app.py
+# 5 chạy file app.py
 
 ```py
-streamlit run streamlit_app.py
+streamlit run app.py
 ```
